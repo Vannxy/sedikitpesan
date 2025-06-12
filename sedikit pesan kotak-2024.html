@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>For Bellaaa</title>
+  <style>
+    body {
+      background-color: #fce4ec;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: left;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: all 2.5s ease-in-out;
+    }
+
+    .card.show {
+      max-height: 1000px;
+      opacity: 1;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #c2185b;
+    }
+
+    p {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-style: italic;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .close-text {
+      text-align: center;
+      font-size: 13px;
+      font-style: italic;
+      color: #999;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .card.show .close-text {
+      opacity: 1;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .heart {
+      font-size: 50px;
+      color: #e91e63;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .btn-buka {
+      background-color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #e91e63;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-buka:hover {
+      background-color: #ffe4f2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="surat">
+    <h2>For Bellaaa B.V.A.</h2>
+    <p>
+      Aku ngga tau harus mulai dari mana.
+      <br><br>
+      Sejak SMP.. aku sempet punya rasa ke kamu. Awale kukira cuma kagum biasa. Tapi makin lama, makin terasa kalau ternyata aku suka sama kamu. Bukan cuma karena kamu asik atau punya senyum yang bikin nyaman, tapi juga karena kamu itu orang yang tulus dan penuh semangat... 
+      <br><br>
+      Sekarang kita udah SMA, sibuk dengan jalan masing-masing. Tapi jujur, perasaan itu ngga sepenuhnya hilang. Kadang muncul tiba-tiba—entah pas denger lagu, ngelihat foto lama masa-masa SMP atau ingat momen-momen kecil before graduation kayak waktu kamu tanya "nandi kok gamasuk", sampai terakhir kemaren waktu kamu ngucapin minal aidzin haha.. Hal-hal itu bikin aku ngerasa kamu juga punya rasa yang sama.
+      <br><br>
+      Aku juga sadar diri kok, ngga semua rasa berujung pada hubungan, dan nggak semua yang kita suka akan suka balik. Aku nulis ini bukan buat bikin risih, bukan juga pengen jawaban. Aku nulis ini cuma karena aku pengen 'jujur'—bahwa ada rasa yang pernah tumbuh...dan mungkin belum benar-benar pergi.
+      <br><br>
+      Kalau setelah ini ngga ada yang berubah, ngga apa-apa. Aku tetap bersyukur pernah kenal kamu, dan aku bakal terus 'doain' yang terbaik buat dirimu. Semoga kamu selalu bahagia dan dikelilingi orang-orang yang bener-bener sayang sama kamu.
+      <br><br>
+      Sebenere aku sempet ragu buat bilang gini, karena aku sadar masih banyak kurangnya-dan masih terus belajar jadi versi terbaik dari diriku sendiri. Tapi hari ini aku beraniin diri buat jujur. Maaf yaa kalau selama ini kadang muncul-ngilang dan chatku yang gajelass. Niatku ngga pernah bikin kamu risih...
+      <br><br>
+      Kadang kita ingin bicara, tapi lebih takut kehilangan. Kita ingin jujur tapi sadar bahwa mungkin kejujuran justru bisa merusak sesuatu yang bahkan belum sempat diberi nama. Maka kita memilih diam, menyembunyikan gejolak dalam pertemuan yang tampak tenang. Mungkin ini bukan takut mencintai, tapi tentang 'belum siap' menanggung patah-jika semuanya tak berjalan sesuai doa. 
+      <br><br>
+      Terima kasih udah jadi inspirasi-untuk senyum kecil, semangat diam-diam, dan semua hal baik yang pernah tumbuh karena hadirmu. Semoga kamu selalu menemukan kebahagiaan di setiap langkahmu dengan apapun yang kamu pilih dan siapapun yang mendampingimu nanti.
+    </p>
+    <div class="signature">-Dari (KOTAK-2024)-</div>
+    <div class="close-text">(Close Here)</div>
+  </div>
+
+  <div class="btn-wrapper">
+    <div class="heart">♥</div>
+    <button class="btn-buka" onclick="toggleSurat(this)">Open Here</button>
+  </div>
+
+  <script>
+    function toggleSurat(btn) {
+      const surat = document.getElementById('surat');
+      surat.classList.toggle('show');
+      btn.textContent = surat.classList.contains('show') ? "Close Here" : "Open Here";
+    }
+  </script>
+
+</body>
+</html>
